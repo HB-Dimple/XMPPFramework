@@ -39,6 +39,18 @@ enum XMPPRoomState
 	return [self initWithRoomStorage:storage jid:aRoomJID dispatchQueue:NULL];
 }
 
+- (instancetype)initWithJid:(XMPPJID *)aRoomJID dispatchQueue:(nullable dispatch_queue_t)queue
+{
+	NSParameterAssert(aRoomJID != nil);
+	
+	if ((self = [super initWithDispatchQueue:queue]))
+	{
+		roomJID = [aRoomJID bareJID];
+	}
+	return self;
+	
+}
+
 - (id)initWithRoomStorage:(id <XMPPRoomStorage>)storage jid:(XMPPJID *)aRoomJID dispatchQueue:(dispatch_queue_t)queue
 {
 	NSParameterAssert(storage != nil);

@@ -305,7 +305,7 @@
 
 - (NSString *)resource
 {
-	return resource; // Why didn't we just synthesize this? See comment above.
+    return @"joinpods.com";// resource; // Why didn't we just synthesize this? See comment above.
 }
 
 - (XMPPJID *)bareJID

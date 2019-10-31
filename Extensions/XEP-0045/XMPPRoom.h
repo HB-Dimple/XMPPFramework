@@ -45,7 +45,7 @@ static NSString *const XMPPMUCOwnerNamespace = @"http://jabber.org/protocol/muc#
 - (instancetype)initWithDispatchQueue:(nullable dispatch_queue_t)queue NS_UNAVAILABLE;
 - (instancetype)initWithRoomStorage:(id <XMPPRoomStorage>)storage jid:(XMPPJID *)roomJID;
 - (instancetype)initWithRoomStorage:(id <XMPPRoomStorage>)storage jid:(XMPPJID *)roomJID dispatchQueue:(nullable dispatch_queue_t)queue;
-
+- (instancetype)initWithJid:(XMPPJID *)aRoomJID dispatchQueue:(nullable dispatch_queue_t)queue;
 /* Inherited from XMPPModule:
 
 - (BOOL)activate:(XMPPStream *)xmppStream;
